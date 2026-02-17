@@ -14,7 +14,7 @@ from telegram.ext import (
 )
 
 # Токен вашего бота (замените на свой)
-TOKEN = "7832050685:AAHGknh0xhzkbP7S3Ur0LWAnDtTG-lRVYZk"
+TOKEN = "7832050685:AAEjYsVOO3225LFEciUD911Em54QqQBzLy0"
 
 # Папка для временного хранения изображений
 TEMP_DIR = "temp_images"
@@ -322,4 +322,5 @@ def main():
     application.run_polling()
 
 if __name__ == "__main__":
+
     main()
