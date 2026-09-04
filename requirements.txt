@@ -6,6 +6,6 @@ pillow==11.2.1
 python-dotenv==1.2.1
 pikepdf==9.7.0
 python-telegram-bot==22.0
-pypdf
+pypdf==5.1.0
 Pillow==11.2.1
 python-dotenv==1.2.1
