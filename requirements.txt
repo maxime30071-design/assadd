@@ -5,7 +5,7 @@ fpdf2==2.8.5
 pillow==11.2.1
 python-dotenv==1.2.1
 pikepdf==9.7.0
-   pypdf
-   Pillow
-   python-telegram-bot
-   python-dotenv
+python-telegram-bot==22.0
+pypdf
+Pillow==11.2.1
+python-dotenv==1.2.1
