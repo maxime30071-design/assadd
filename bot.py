@@ -1,3 +1,46 @@
+import subprocess
+import sys
+
+def install_if_missing(package):
+    """Устанавливает пакет, если его нет."""
+    try:
+        __import__(package)
+    except ImportError:
+        print(f"⏳ Устанавливаю {package}...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--quiet"])
+
+# Устанавливаем всё нужное ДО импортов
+install_if_missing("telegram")
+install_if_missing("telegram.ext")
+install_if_missing("pypdf")
+install_if_missing("PIL")
+install_if_missing("dotenv")
+
+print("✅ Все библиотеки на месте, запускаем бота...")
+
+# ===== ДАЛЕЕ ИДУТ ВАШИ ОБЫЧНЫЕ ИМПОРТЫ =====
+import uuid
+import os
+import shutil
+import json
+import logging
+import asyncio
+from enum import IntEnum
+from typing import Set
+
+from dotenv import load_dotenv
+from PIL import Image
+from pypdf import PdfReader, PdfWriter
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, InputFile
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    MessageHandler,
+    CallbackQueryHandler,
+    filters,
+    ContextTypes,
+)
+# ... и дальше весь ваш остальной код без изменений ...
 import uuid
 import os
 import shutil
